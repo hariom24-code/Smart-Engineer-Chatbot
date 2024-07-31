@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Engineer Chatbot</title>
+    <script src="https://kit.fontawesome.com/fb7e4fb756.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 89vh;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 0px;
+            width: 98%;
+            border-radius: 5px;
+            text-align: center;
+            top: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+        #aichatbot {
+            margin: 20px auto;
+            width: 400px;
+            height:5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            color: black;
+            visibility: visible;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            width: 97%;
+            border-radius: 5px;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+        }
+      .robo{
+            font-size: 50px;
+            color: rgb(24, 159, 213);
+            padding: 0%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Smart Engineer</h1>
+        <p>Your go-to chatbot for all engineering queries!</p>
+    </header>
+    <main>
+        <h2>Meet Smart Engineer</h2>
+        <p>Smart Engineer is here to help you with all your engineering-related questions. Whether you need help with coding, understanding complex concepts, or just want to learn something new, Smart Engineer is your reliable assistant.</p>
+        <div id="aichatbot"></div>
+          <a class="robo"><i class="fa-solid fa-robot" ></i></a>
+          <p>Click on the chatbot at right-bottom corner 👉👉👉</p>
+        </main>
+    <footer>
+        <p>© 2024 Smart Engineer. All rights reserved.</p>
+        <p>Powered by - thecodingbrain.com</p>
+    </footer>
+    
+    <script>
+        !function(w, d, s, ...args){
+          var div = d.createElement('div');
+          div.id = 'aichatbot';
+          d.body.appendChild(div);
+          w.chatbotConfig = args;
+          var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+          j.defer = true;
+          j.type = 'module';
+          j.src = 'https://aichatbot.sendbird.com/index.js';
+          f.parentNode.insertBefore(j, f);
+        }(window, document, 'script', '2C73078E-59EF-4C6B-96F5-D5ABDCB2F38D', 'onboarding_bot', {
+          apiHost: 'https://api-cf-ap-8.sendbird.com',
+        });
+        </script>
+</body>
+</html>
